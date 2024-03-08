@@ -124,7 +124,7 @@ SUM(cast(va.new_vaccinations as int)) over (partition by de.location) as PeopleV
  on de.location = va.location
  and de.date = va.date 
  where de.continent is not null
- --order by 2,3
+ 
 )
  
  select * ,(PeopleVaccinated/population)*100 as VacPeoplePercentage 
